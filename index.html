@@ -28,6 +28,9 @@
 
                 });
             $(".btn").click(function(){
+                $.get("https://cat-fact.herokuapp.com/facts", function(data){
+                    console.log(data)
+                })
                 console.log('hey')
             })
         </script>
