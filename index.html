@@ -14,8 +14,10 @@
                 <div class="col-6 cat-container">
                 <img class="img-fluid" src="./cat-img.jpeg" alt="cat">
                 </div>
-                <div class="col-6 facts-container">
+                <div class="col-6">
                     <h1> Cat Facts </h1>
+                    <div id="facts-container">
+                    </div>
                     <button class="btn btn-dark btn-block btn-lg"> Get Facts </button>
                 </div>
             </div>
@@ -29,7 +31,12 @@
                 });
             $(".btn").click(function(){
                 $.get("https://cat-fact.herokuapp.com/facts", function(data){
-                    console.log(data)
+                    let container=document.getElementById("facts-container")
+                    data.map(x=>{
+                        console.log(x.text)
+                        container.append(x.text)
+
+                    })
                 })
                 console.log('hey')
             })
