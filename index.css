@@ -1,0 +1,15 @@
+
+h1{
+    margin: 10px auto;
+    font-size: 50px;
+}
+
+.facts-container{
+    text-align: center;
+}
+
+button{
+    position: absolute;
+    bottom: 0px;
+    
+}
